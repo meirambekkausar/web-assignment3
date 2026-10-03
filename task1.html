@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" >
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 1:Boxes</title>
+        <style>
+            *{
+                box-sizing : border-box ;
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                display:flex;
+                flex-wrap:wrap ;
+                padding:20px;
+
+            }
+            .box {
+              /* mobile,each box full width*/  
+                width:100%;
+                background-color:blue ;
+                color:antiquewhite ;
+                text-align:center ;
+                font-size:1.25rem; 
+                font-weight:bold;
+                padding:40px ;
+                margin: 20px 0px;
+                border-radius: 10px;
+
+            }
+            /* tablet,2 in a row*/
+            @media (min-width:768px) and (max-width:1023px) {
+                .box {
+                    width:50% ;
+
+                }
+            }
+            /* desktop,3 in a row*/
+            @media (min-width:1024px){
+                .box{
+                    width:33.333% ;
+                }
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">Box 1 </div>
+            <div class="box">Box 2 </div>
+            <div class="box">Box 3 </div>
+        </div>
+    </body>
+</html>    
